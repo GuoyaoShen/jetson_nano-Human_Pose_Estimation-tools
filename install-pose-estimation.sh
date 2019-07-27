@@ -32,10 +32,10 @@ swig -python -c++ pafprocess.i && python3 setup.py build_ext --inplace
 cd ~/tf-pose-estimation
 
 # ===new added
+# merge new repository
 git init
-git remote add guoyao https://github.com/GuoyaoShen/jetson_nano-Human_Pose_Estimation tf-pose-estimation
-git fetch guoyao
-git checkout -b master guoyao/master
+git remote add guoyao https://github.com/GuoyaoShen/jetson_nano-Human_Pose_Estimation
+git pull guoyao master --allow-unrelated-histories
 cd ~/tf-pose-estimation/
 # ===new added
 
