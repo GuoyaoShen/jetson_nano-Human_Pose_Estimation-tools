@@ -21,6 +21,7 @@ cd && git clone https://github.com/ildoonet/tf-pose-estimation.git
 cd ~/tf-pose-estimation
 
 # ===new added
+git init
 git remote add guoyaoshen https://github.com/GuoyaoShen/tf-pose-estimation
 git fetch guoyaoshen
 git checkout -b jetson_nano guoyaoshen/jetson_nano
@@ -31,6 +32,7 @@ swig -python -c++ pafprocess.i && python3 setup.py build_ext --inplace
 cd ~/tf-pose-estimation
 
 # ===new added
+git init
 git remote add guoyao https://github.com/GuoyaoShen/jetson_nano-Human_Pose_Estimation tf-pose-estimation
 git fetch guoyao
 git checkout -b master guoyao/master
