@@ -20,19 +20,21 @@ pip3 install pycocotools
 cd && git clone https://github.com/ildoonet/tf-pose-estimation.git
 cd ~/tf-pose-estimation
 
-git remote add karaage0703 https://github.com/karaage0703/tf-pose-estimation
-git fetch karaage0703
-git checkout -b jetson_nano karaage0703/jetson_nano
+# ===new added
+git remote add guoyaoshen https://github.com/GuoyaoShen/tf-pose-estimation
+git fetch guoyaoshen
+git checkout -b jetson_nano guoyaoshen/jetson_nano
+# ===new added
 cd ~/tf-pose-estimation/tf_pose/pafprocess
 sudo apt-get -y install swig
 swig -python -c++ pafprocess.i && python3 setup.py build_ext --inplace
-cd ~/tf-pose-estimation/
+cd ~/tf-pose-estimation
 
 # ===new added
-git remote add guoyao https://github.com/GuoyaoShen/jetson_nano-Human_Pose_Estimation
+git remote add guoyao https://github.com/GuoyaoShen/jetson_nano-Human_Pose_Estimation tf-pose-estimation
 git fetch guoyao
 git checkout -b master guoyao/master
-cd ~/tf-pose-estimation
+cd ~/tf-pose-estimation/
 # ===new added
 
 # Reference site
